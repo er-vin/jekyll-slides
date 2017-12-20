@@ -1,0 +1,9 @@
+stages:
+  - deploy
+
+Git MIRROR:
+  stage: deploy
+  script:
+    - true
+  after_script:
+    - git push --mirror https://$GITHUB_USERNAME:$GITHUB_PASSWORD@github.com/er-vin/jekyll-slides.git
